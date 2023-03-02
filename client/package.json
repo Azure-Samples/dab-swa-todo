@@ -1,0 +1,18 @@
+{
+  "name": "todomvc-vue3-client",
+  "version": "1.1.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@aacassandra/vue3-progressbar": "^1.0.3",    
+    "vue": "^3.2.41"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.1.2",
+    "vite": "^3.1.8",
+    "git-describe": "^4.1.1"
+  }
+}
