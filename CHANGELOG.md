@@ -1,9 +1,13 @@
-## [dab-swa-todo] Changelog
+## [project-title] Changelog
 
-<a name="project-creation"></a>
-# Project Creation (2023-03-02)
+<a name="x.y.z"></a>
+# x.y.z (yyyy-mm-dd)
 
 *Features*
-* CRUD access to database contents with REST or GraphQL
-* Built-in authorization with Static Web Apps authentication
-* Database deployment via Database Project
+* ...
+
+*Bug Fixes*
+* ...
+
+*Breaking Changes*
+* ...
