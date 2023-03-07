@@ -13,12 +13,12 @@ end else begin
     if not exists (select * from sys.server_principals where [type] in ('E', 'S') and [name] = 'todo_dab_user')
     begin 
         create login [todo_dab_user] with password = 'rANd0m_PAzzw0rd!'
-        
-        if not exists (select * from sys.database_principals where [type] in ('E', 'S') and [name] = 'todo_dab_user')
-        begin
-            create user [todo_dab_user] from login [todo_dab_user]            
-        end
     end    
+
+    if not exists (select * from sys.database_principals where [type] in ('E', 'S') and [name] = 'todo_dab_user')
+    begin
+        create user [todo_dab_user] from login [todo_dab_user]            
+    end
 
     alter role db_owner add member [todo_dab_user]
 end
