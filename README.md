@@ -1,13 +1,20 @@
 # Jamstack Todo App with Azure Static Web Apps, Data API builder and Azure SQL Database
 
-A sample Todo app built with Vue.js and .NET 6 that uses Azure Static Web Apps, Data API builder and Azure SQL Database.
+A sample Todo app built with Vue.js that uses Azure Static Web Apps, Data API builder and Azure SQL Database.
 
-It supports the following features
+The Todo application allows to
 
-- Public and private todos
+- Create either public or private todos 
+- Update or delete todos
+- Mark a todo as completed
 - Drag and drop to reorder todos
-- Authentication Easy Auth configured to use GitHub
+
+it uses the following features
+
+- Backend REST API via Data API builder 
+- Authentication via Easy Auth configured to use GitHub
 - Authorization via Data API builder policies
+- Data API builder hosted in Azure via Static Web Apps "Database Connections"
 
 ## Local development
 
