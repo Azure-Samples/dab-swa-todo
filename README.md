@@ -144,6 +144,14 @@ The create the AD admin in Azure SQL server:
 az sql server ad-admin create --display-name <display-name> --object-id <object-id> --server <server-name> -g <resource-group>
 ```
 
+Make sure that Azure Services can connect to the created Azure SQL server:
+
+```shell
+az sql server firewall-rule create -n AllowAllWindowsAzureIps -g <resource-group> --server <server-name> --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
+```
+
+Make sure to read more details about how to configure the firewall here: [Connections from inside Azure](https://learn.microsoft.com/azure/azure-sql/database/firewall-configure?view=azuresql#connections-from-inside-azure)
+
 Get the connection string (don't worry if the TodoDB database doesn't exist yet, it will be created later automatically):
 
 ```shell 
