@@ -168,6 +168,11 @@ Push the repo to GitHub to kick off the deployment.
 
 Once the deployment has completed, navigate to the Static Web App resource in the Azure Portal and click on the *Database connection (preview)* item under *Settings*. Click on *Link existing database* to connect to the Azure SQL server and the TodoDB that was created by the deployment.
 
+You can use the sample application user that is created during the [database deployment phase](./database/TodoDB/Script.PostDeployment.sql):
+
+- User: `todo_dab_user`
+- Password: `rANd0m_PAzzw0rd!`
+
 ## Done!
 
 Use your browser to navigate to the Static Web App URL and start using the app.
