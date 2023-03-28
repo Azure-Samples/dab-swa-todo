@@ -98,7 +98,13 @@ Make sure you have the AZ CLI installed.
 
 ### Setup the Static Web App resource
 
-Create a new Static Web App using the following command:
+Create a Resource Group if you don't have one already:
+
+```shell
+az group create -n <resource-group> -l <location>
+```
+
+then create a new Static Web App using the following command:
 
 ```shell
 az staticwebapp create -n <name> -g <resource-group>
@@ -138,7 +144,7 @@ The create the AD admin in Azure SQL server:
 az sql server ad-admin create --display-name <display-name> --object-id <object-id> --server <server-name> -g <resource-group>
 ```
 
-Get the connection string (no worries if the TodoDB database doesn't exist yet, it will be created later automatically):
+Get the connection string (don't worry if the TodoDB database doesn't exist yet, it will be created later automatically):
 
 ```shell 
 az sql db show-connection-string -s <server-name> -n TodoDB -c ado.net
