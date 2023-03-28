@@ -166,7 +166,7 @@ Push the repo to GitHub to kick off the deployment.
 
 ### Configure the Static Web App Database Connection
 
-Once the deployment has completed, navigate to the Static Web App resource in the Azure Portal and click on the *Database connection (preview)* item under *Settings*. Click on *Link existing database* to connect to the Azure SQL server and the TodoDB that was created by the deployment.
+Once the deployment has completed, navigate to the Static Web App resource in the Azure Portal and click on the [Database connection](https://learn.microsoft.com/azure/static-web-apps/database-azure-sql?tabs=bash&pivots=static-web-apps-rest) item under *Settings*. Click on *Link existing database* to connect to the Azure SQL server and the TodoDB that was created by the deployment.
 
 ## Done!
 
