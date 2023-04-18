@@ -187,7 +187,7 @@ export default {
       fetch(API, {
         headers: HEADERS,
         method: "POST",
-        body: JSON.stringify({ title: value, order: this.todos.length+1, owner_id: this.userId })
+        body: JSON.stringify({ title: value, order: this.todos.length+1, owner_id: this.userId ?? "public" })
       }).then(res => {
         if (res.ok) {
           this.newTodo = ''
