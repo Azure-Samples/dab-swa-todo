@@ -148,17 +148,19 @@ export default {
       this.todos[sourceIndex].order = sourceIndex + 1
       this.todos[destIndex] = sourceTodo;
       this.todos[destIndex].order = destIndex + 1;      
+
+      const userId = this.userId ?? "public";
       
       fetch(API + `/id/${destTodo.id}`, {
           headers: HEADERS,
           method: "PATCH",
-          body: JSON.stringify({ order: destTodo.order })
+          body: JSON.stringify({ order: destTodo.order, owner_id: userId })
         });
 
       fetch(API + `/id/${sourceTodo.id}`, {
           headers: HEADERS,
           method: "PATCH",
-          body: JSON.stringify({ order: sourceTodo.order })
+          body: JSON.stringify({ order: sourceTodo.order, owner_id: userId })
         });
     },
 
@@ -202,7 +204,7 @@ export default {
       fetch(API + `/id/${todo.id}`, {
         headers: HEADERS,
         method: "PATCH",
-        body: JSON.stringify({ completed: todo.completed, order: todo.order })
+        body: JSON.stringify({ completed: todo.completed, order: todo.order, owner_id: this.userId ?? "public" })
       });
     },
 
@@ -235,7 +237,7 @@ export default {
         fetch(API + `/id/${todo.id}`, {
           headers: HEADERS,
           method: "PATCH",
-          body: JSON.stringify({ title: todo.title, order: todo.order })
+          body: JSON.stringify({ title: todo.title, order: todo.order, owner_id: this.userId ?? "public" })
         });
       }
     },
