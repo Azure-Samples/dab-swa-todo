@@ -1,5 +1,5 @@
 {
-  "$schema": "https://github.com/Azure/data-api-builder/releases/download/v0.6.14/dab.draft.schema.json",
+  "$schema": "https://github.com/Azure/data-api-builder/releases/download/v0.7.6/dab.draft.schema.json",
   "data-source": {
     "database-type": "mssql",
     "connection-string": "@env('AZURE_SQL_APP_USER')"
