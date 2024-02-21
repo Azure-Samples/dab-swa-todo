@@ -1,0 +1,5 @@
+CREATE TABLE [dbo].[categories]
+(
+  [id] INT NOT NULL PRIMARY KEY NONCLUSTERED,
+  [category] NVARCHAR(100) NOT NULL
+)
