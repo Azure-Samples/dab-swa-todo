@@ -1,32 +1,48 @@
 {
-  "$schema": "https://github.com/Azure/data-api-builder/releases/download/v0.7.6/dab.draft.schema.json",
+  "$schema": "https://github.com/Azure/data-api-builder/releases/download/v0.9.7/dab.draft.schema.json",
   "data-source": {
     "database-type": "mssql",
     "connection-string": "@env('AZURE_SQL_APP_USER')"
   },
   "runtime": {
     "rest": {
-      "path": "/rest"
+      "enabled": true,
+      "path": "/rest",
+      "request-body-strict": true
     },
     "graphql": {
-      "path": "/graphql"
+      "enabled": true,
+      "path": "/graphql",
+      "allow-introspection": true
     },
-    "host": { 
-      "mode": "development",     
+    "host": {
       "cors": {
-        "origins": [ ],
+        "origins": [],
         "allow-credentials": false
       },
       "authentication": {
         "provider": "StaticWebApps"
-      }
+      },
+      "mode": "development"
     }
   },
   "entities": {
     "Todo": {
-      "source": "dbo.todos",
+      "source": {
+        "object": "dbo.todos",
+        "type": "table",
+        "key-fields": []
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "Todo",
+          "plural": "Todos"
+        }
+      },
       "rest": {
-        "path": "todo"
+        "enabled": true,
+        "path": "/todo"
       },
       "permissions": [
         {
@@ -37,7 +53,7 @@
               "policy": {
                 "database": "@item.owner_id eq 'public'"
               }
-            }            
+            }
           ]
         },
         {
@@ -48,13 +64,13 @@
               "policy": {
                 "database": "@item.owner_id eq @claims.userId"
               }
-            }            
+            }
           ]
-        }        
+        }
       ],
       "mappings": {
         "position": "order"
-      }      
+      }
     }
   }
 }

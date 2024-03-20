@@ -4,6 +4,7 @@
     "dab-swa-todo": {
       "appLocation": "client",
       "outputLocation": "dist",
+      "dataApiLocation": "swa-db-connections",
       "appBuildCommand": "npm run build",
       "run": "npm run dev",
       "appDevserverUrl": "http://localhost:5173"
