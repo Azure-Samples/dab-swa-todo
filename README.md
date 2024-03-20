@@ -1,3 +1,23 @@
+---
+page_type: sample
+languages:
+- azurecli
+- azstatic-cli
+- aspx
+- csharp
+- nodejs
+- javascript
+products:
+- azure
+- static-web-apps
+- azure-sql-database
+- data-api-builder
+urlFragment: sample
+name: Jamstack Todo App with Azure Static Web Apps, Data API builder, and Azure SQL Database
+description: This app creates a backend REST API with the Data API builder, uses Easy Auth configured with GitHub, authorizes data access using Data API builder prolicies, and hosts Data API builder in Azure Static Web Apps using "database connections."
+---
+<!-- YAML front-matter schema: https://review.learn.microsoft.com/en-us/help/contribute/samples/process/onboarding?branch=main#supported-metadata-fields-for-readmemd -->
+
 # Jamstack Todo App with Azure Static Web Apps, Data API builder and Azure SQL Database
 
 A sample Todo app built with Vue.js that uses Azure Static Web Apps, Data API builder and Azure SQL Database.
