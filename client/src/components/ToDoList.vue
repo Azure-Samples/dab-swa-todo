@@ -138,7 +138,7 @@ export default {
       evt.preventDefault();
     },
 
-    dragDrop: function(evt, destTodo) {      
+    dragDrop: async function(evt, destTodo) {      
       evt.target.classList.remove("drag");   
       const sourceId = evt.dataTransfer.getData('itemID')
       const sourceTodo = this.todos.find((t => t.id == sourceId))      
@@ -151,13 +151,13 @@ export default {
 
       const userId = this.userId ?? "public";
       
-      fetch(API + `/id/${destTodo.id}`, {
+      await fetch(API + `/id/${destTodo.id}`, {
           headers: HEADERS,
           method: "PATCH",
           body: JSON.stringify({ order: destTodo.order, owner_id: userId })
         });
 
-      fetch(API + `/id/${sourceTodo.id}`, {
+      await fetch(API + `/id/${sourceTodo.id}`, {
           headers: HEADERS,
           method: "PATCH",
           body: JSON.stringify({ order: sourceTodo.order, owner_id: userId })
