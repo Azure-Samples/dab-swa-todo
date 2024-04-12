@@ -11,7 +11,6 @@ products:
 - azure
 - static-web-apps
 - azure-sql-database
-- data-api-builder
 urlFragment: sample
 name: Jamstack Todo App with Azure Static Web Apps, Data API builder, and Azure SQL Database
 description: This app creates a backend REST API with the Data API builder, uses Easy Auth configured with GitHub, authorizes data access using Data API builder prolicies, and hosts Data API builder in Azure Static Web Apps using "database connections."
